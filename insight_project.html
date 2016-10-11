@@ -88,21 +88,22 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Paragraph 1</p>
+                    <h2 class="section-heading">Introduction</h2>
+                    <p>I did a 3-week consulting project with an exciting company that uses personalized medicine to help cancer patients find treatments that work for them. For legal reasons I can’t talk about the specifics or mention the company’s name, but one of the challenges that they face is the automatic detection of cancer cells in flow cytometry data. This is a key challenge that the company needs to overcome to scale up their business.</p>
 
-                    <p>Paragraph 2</p>
+                    <h2 class="section-heading">Description of the company's workflow</h2>
 
-                    <h2 class="section-heading">Header</h2>
+                    <p>Company X uses a propriety platform to find conditions that target an individual patient’s cancer. They use a technique called flow cytometry to determine the effectiveness of their platform (i.e. how many cancer cells are left)....but what is flow cytometry and how does it work? Disclaimer: flow cytometry has been around for decades in research and applied settings, and there are many different variations of flow cytometry. I will describe a simplified version of flow cytometry and its analysis here.   Flow cytometry is a technique in which hydrodynamic focusing is used to take a large population of cells and line them up one at a time. Each cell is then passed through the light path of several lasers and the way the laser light interacts with the cell is captured. For instance, how the light “scatters” or is distorted by the cell can tell you about the cell size and cell shape. In addition, the presence and amount of various cell surface markers (detected by the fluorescently tagged antibodies mentioned earlier) gives information about the cell type (e.g. a healthy cell, a cancerous cell).</p>
 
-                    <p>Paragraph</p>
 
-                    <blockquote>Quoted text.</blockquote>
+                    <h2 class="section-heading">A brief introduction to flow cytometry</h2>
 
-                    <p>Paragraph goes here</p>
+                    <p>Now that we have an understanding of the technology, what does the data look like? In the case that I will describe here 30 measurements are captured for 10,000 cells on a per cell basis. We can think of this data as a matrix of numbers: 10,000 rows (or cells) by 30 columns (or features). Since humans aren’t very good at thinking in 30-dimensions, the way that manual analysis of flow cytometry data is done is by picking two dimensions (or features) at a time, selecting cells within that population for further analysis and then repeating the whole process with two different features. In the end a skilled and experienced expert can quantify the number cancer cell left after different drug treatments, but it is very time-consuming and is a huge bottleneck for Company X, affecting their ability to keep up with the demand for their services.</p>
 
-                    <h2 class="section-heading">Header 2</h2>
+					<blockquote>My goal was to alleviate the bottleneck at Company X so that they can help more patients</blockquote>
 
-                    <p>Another paragraph</p>
+					<p>My goal was to alleviate the bottleneck at Company X so that they can help more patients. I wanted to do this by developing an unsupervised approach to automatically detect and quantify the number of cancerous cells left after the application of their propriety platform. This approach needs to be unsupervised because both normal and cancer cells vary from patient to patient, so the antibodies used in a given experiment may change as well (resulting in different features).</p>
+
 
                     <a href="#">
                         <img class="img-responsive" src="img/post-sample-image.jpg" alt="">
