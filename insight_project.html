@@ -111,19 +111,21 @@
                     <a href="">
                         <img class="img-responsive" src="img/Figure1.png" alt="">
                     </a>
-                    <span class="caption text-muted">Histograms of log-transformed features illustrate the differences in the distributions of various figures.</span>
+                    <span class="caption text-muted">Figure 1: Histograms of log-transformed features illustrate the differences in the distributions of various figures.</span>
 					
 					<p>Another useful way to visualize high-dimensional data is to make every potential combination of pairwise scatterplots (Figure 2). Whereas histograms helped us understand the individual features, scatterplots can help us understand the relationships between the different features. For instance, in the blow-up that I did of Figure 2 (right panel) you can see that several of the features are highly correlated with each other (most of the data lays along the y=x line). A better way to determine if features are correlated is to simply calculate the Pearson correlation coefficient between all feature pairs (Figure 3).</p>
                     
                     <a href="">
                         <img class="img-responsive" src="img/Figure2.png" alt="">
                     </a>
-                    <span class="caption text-muted">Left panel: All combinations of pair-wise scatterplots. Right panel: An enlargement of selected features.</span>
-
+                    <span class="caption text-muted">Figure 2: Left panel: All combinations of pair-wise scatterplots. Right panel: An enlargement of selected features.</span>
+					
+					<br>
+                    
                     <a href="">
                         <img class="img-responsive" src="img/Figure3.png" alt="">
                     </a>
-                    <span class="caption text-muted">To determine the relationships between features the Pearson correlation coefficient between all feature pairs was calculated.</span>
+                    <span class="caption text-muted">Figure 3: To determine the relationships between features the Pearson correlation coefficient between all feature pairs was calculated.</span>
 
                     <h2 class="section-heading">Modeling</h2>
 					<p>Now that we understand the data we are almost ready to start modeling. I mentioned before that any method that I use to identify cancer cell populations has to be unsupervised so that it will be able to identify cancer cells in different patients (i.e. different patients = different antibodies and different features), however in order to do efficient modeling I need some idea of the ground truth. To this end Company X provided a small amount of data in which the cancer cells were labeled. I will evaluate the performance of my models against this ground truth. To determine if my model is overfitting the training data I have multiple independent datasets that I will test the models on as well. It was not a trivial task for the company to generate this labeled data, or for me to convert the data into a format that was conducive for fast, iterative modeling, but I’m not going to discuss those challenges in this blog post.</p>
@@ -136,13 +138,18 @@
                     <a href="">
                         <img class="img-responsive" src="img/Figure4.png" alt="">
                     </a>
-                    <span class="caption text-muted">t-distributed Stochastic Neighbor Embedding (t-SNE) was used to reduce the dimensionality of the data.</span>
-
+                    <span class="caption text-muted">Figure 4: t-distributed Stochastic Neighbor Embedding (t-SNE) was used to reduce the dimensionality of the data.</span>
+					
+					<br>
+					
                     <a href="">
                         <img class="img-responsive" src="img/Figure5.png" alt="">
                     </a>
-                    <span class="caption text-muted"> Density-Based Spatial Clustering of Applications with Noise (DBSCAN) was used to automatically identify clusters. I've circled in red the cluster that contains most of the cancer cells.</span>
+                    <span class="caption text-muted">Figure 5: Density-Based Spatial Clustering of Applications with Noise (DBSCAN) was used to automatically identify clusters. I've circled in red the cluster that contains most of the cancer cells.</span>
+					
+					<br>
 
+					
                     <a href="">
                         <img class="img-responsive" src="img/Figure6.png" alt="">
                     </a>
