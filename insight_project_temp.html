@@ -108,22 +108,20 @@
 
 					<p>Now lets take a look at the actual data and start exploring it! One of the first things that I normally do when presented with a new dataset is plot histograms of each feature to get an idea of how the data is distributed. Note: the labels on the plots are intentionally uninformative. Below (Figure 1) I selected four features to display, you can see that the upper left distribution is roughly a Gaussian distribution and the two distributions on the right appear like they might be bimodial (a mixture of two Gaussian distributions), whereas the bottom left distribution might be tri-modal or might not a mixture of Gaussians at all.</p>
                     
-                        <img class="img-responsive" src="img/Figure1.png" alt="">
+                    <img class="img-responsive" src="img/Figure1.png" alt="">
 
                     <span class="caption text-muted">Figure 1: Histograms of log-transformed features illustrate the differences in the distributions of various figures.</span>
 					
 					<p>Another useful way to visualize high-dimensional data is to make every potential combination of pairwise scatterplots (Figure 2). Whereas histograms helped us understand the individual features, scatterplots can help us understand the relationships between the different features. For instance, in the blow-up that I did of Figure 2 (right panel) you can see that several of the features are highly correlated with each other (most of the data lays along the y=x line). A better way to determine if features are correlated is to simply calculate the Pearson correlation coefficient between all feature pairs (Figure 3).</p>
                     
-                    <a href="">
-                        <img class="img-responsive" src="img/Figure2.png" alt="">
-                    </a>
+                    <img class="img-responsive" src="img/Figure2.png" alt="">
+
                     <span class="caption text-muted">Figure 2: Left panel: All combinations of pair-wise scatterplots. Right panel: An enlargement of selected features.</span>
 					
 					<br><br><br>
                     
-                    <a href="">
-                        <img class="img-responsive" src="img/Figure3.png" alt="">
-                    </a>
+                    <img class="img-responsive" src="img/Figure3.png" alt="">
+                    
                     <span class="caption text-muted">Figure 3: To determine the relationships between features the Pearson correlation coefficient between all feature pairs was calculated.</span>
 
                     <h2 class="section-heading">Modeling</h2>
@@ -134,24 +132,21 @@
 					<h2 class="section-heading">A clustering method that works!</h2>
 					<p>Since PCA is a linear dimensionality reduction method, I next attempted a non-linear dimensionality reduction method called t-Distributed Stochastic Neighbor Embedding (t-SNE) which seeks the optimal 2D projection of the data the preserves the local structure in the original high-dimensional space. This resulted in most of the cancer cells clustering together and a clear separation between the cancer and non-cancer cells (Figure 4). To automatically identify clusters in this data I next used DBSCAN which is a density-based unsupervised clustering technique (Figure 5). Finally, we can quantify these results to determine how accurate and precise this method is at identifying cancer cells. In Figure 6 I’ve plotted the percentage of cell type found in each cluster, where blue is non-cancerous and green is cancer cells. You can see that most clusters are almost entirely composed of non-cancerous cells (blue bar is close to 100%) and if we focus on cluster 7 we can see that it is mainly composed of the cancerous cells (perfect results would have shown cluster 7 composed entirely of cancerous cells and no cancer cells would be in any other cluster). Excitingly, when I showed these results to Company X they looked at the non-cancerous cells that I had identified as being part of cluster 7 and over half of them were originally mis-classified and are in fact cancer cells! Finally, I created boxplots to summarize the data on a per cluster basis. This will allow an expert to validate the results and to identify which cluster the cancer cells belong to in an unlabeled dataset.</p>
 
-                    <a href="">
-                        <img class="img-responsive" src="img/Figure4.png" alt="">
-                    </a>
+                    <img class="img-responsive" src="img/Figure4.png" alt="">
+
                     <span class="caption text-muted">Figure 4: t-distributed Stochastic Neighbor Embedding (t-SNE) was used to reduce the dimensionality of the data.</span>
 					
 					<br><br><br>
 					
-                    <a href="">
-                        <img class="img-responsive" src="img/Figure5.png" alt="">
-                    </a>
+                    <img class="img-responsive" src="img/Figure5.png" alt="">
+
                     <span class="caption text-muted">Figure 5: Density-Based Spatial Clustering of Applications with Noise (DBSCAN) was used to automatically identify clusters. I've circled in red the cluster that contains most of the cancer cells.</span>
 					
 					<br><br><br>
 
 					
-                    <a href="">
-                        <img class="img-responsive" src="img/Figure6.png" alt="">
-                    </a>
+                    <img class="img-responsive" src="img/Figure6.png" alt="">
+
                     <span class="caption text-muted">Figure 6: The percentage of cell type found in each cluster is plotted, where blue represents the non-cancerous cells and green represents the cancerous cells. Cluster label refers to clusters identified with DBSCAN.</span>
 
 
