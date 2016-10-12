@@ -89,7 +89,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <h2 class="section-heading">Introduction</h2>
-                    <p>I did a 3-week consulting project with an exciting company that uses personalized medicine to help cancer patients find treatments that work for them. For legal reasons I can’t talk about the specifics or mention the company’s name, but one of the challenges that they face is the automatic detection of cancer cells in flow cytometry data. This is a key challenge that the company needs to overcome to scale up their business.</p>
+                    <p>I did a 3-week consulting project with an exciting company that uses personalized medicine to help cancer patients find treatments that work for them. One of the challenges that this company faces is the automatic detection of cancer cells in flow cytometry data. This is a key challenge that the company needs to overcome to scale up their business.</p>
 
                     <h2 class="section-heading">Description of the company's workflow</h2>
 
@@ -108,9 +108,8 @@
 
 					<p>Now lets take a look at the actual data and start exploring it! One of the first things that I normally do when presented with a new dataset is plot histograms of each feature to get an idea of how the data is distributed. Note: the labels on the plots are intentionally uninformative. Below (Figure 1) I selected four features to display, you can see that the upper left distribution is roughly a Gaussian distribution and the two distributions on the right appear like they might be bimodial (a mixture of two Gaussian distributions), whereas the bottom left distribution might be tri-modal or might not a mixture of Gaussians at all.</p>
                     
-                    <a href="">
                         <img class="img-responsive" src="img/Figure1.png" alt="">
-                    </a>
+
                     <span class="caption text-muted">Figure 1: Histograms of log-transformed features illustrate the differences in the distributions of various figures.</span>
 					
 					<p>Another useful way to visualize high-dimensional data is to make every potential combination of pairwise scatterplots (Figure 2). Whereas histograms helped us understand the individual features, scatterplots can help us understand the relationships between the different features. For instance, in the blow-up that I did of Figure 2 (right panel) you can see that several of the features are highly correlated with each other (most of the data lays along the y=x line). A better way to determine if features are correlated is to simply calculate the Pearson correlation coefficient between all feature pairs (Figure 3).</p>
